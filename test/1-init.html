@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue初始化</title>
+  <script src="/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">{{name}}{{arr[0].title}}</div>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        name: "Vue初始化",
+        arr: [{ title: 'hello' }]
+      },
+      mounted () {
+        console.log('this.name :>> ', this.name);
+        console.log('this.arr :>> ', this.arr[0].title);
+      },
+    })
+  </script>
+</body>
+
+</html>
